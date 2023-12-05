@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J^4 | Inserimento</title>
+    <h1>OCHO!!! Se ricarichi questa pagina rischi di rimandare l'ultimo risultato, meglio cliccare sulla barra dell'url e dare invio o evitare proprio di ricaricare</h1>
+    <br>
+    <h2>Per vedere i codici delle squadre fai ispeziona</h2>
+    <h2>Per inserire il jolly, inserisci -1 come risultato</h2>
+    <br>
+</head>
+<body>
+    <form action="" method="post">
+        <p>Codice squadra:</p>
+        <p><input type="text" name="codice_squadra"></p>
+        <p>Numero problema:</p>
+        <p><input type="text" name="numero_problema"></p>
+        <p>Risultato:</p>
+        <p><input type="text" name="risultato"></p>
+        <p><input type="submit"></p>
+    </form>
+    <br>
+    <h2>Squadre:</h2>
+    {% for squadra in squadre %}
+        <p>{{ squadra }}</p>
+    {% endfor %}
+</body>
+</html>

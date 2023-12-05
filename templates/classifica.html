@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J^4 | Classifica</title>
+    <script>
+        window.setInterval(function(){
+            window.location.reload();
+        }, 10000)
+    </script>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <table>
+        <tr class="table__header">
+            {% for header in headings %}
+                <th class="table__cell">{{ header }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in data %}
+            <tr class="table__row">
+                {% for cell in row %}
+                    {% if cell[2] == 0 %} <!-- SE NON C'E' IL JOLLY-->
+                        {% if cell[1] == -1 %}
+                            <td class="table__cell casellina-1">{{ cell[0] }}</td>
+                        {% endif %}
+                        {% if cell[1] == 0 %}
+                            <td class="table__cell">{{ cell[0] }}</td>
+                        {% endif %}
+                        {% if cell[1] == 1 %}
+                            <td class="table__cell casellina1">{{ cell[0] }}</td>
+                        {% endif %}
+                    {% else %} <!-- SE C'E' IL JOLLY-->
+                        {% if cell[1] == -1 %}
+                        <td class="table__cell casellina-1 jolly">{{ cell[0] }}</td>
+                        {% endif %}
+                        {% if cell[1] == 0 %}
+                            <td class="table__cell jolly">{{ cell[0] }}</td>
+                        {% endif %}
+                        {% if cell[1] == 1 %}
+                            <td class="table__cell casellina1 jolly">{{ cell[0] }}</td>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <div class="container">
+        <h1 class="tempo">{{ tempo }}</h1>
+    </div>
+</body>
+</html>
