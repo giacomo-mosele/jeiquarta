@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>J^4 | Classifica</title>
     <script>
-        window.setInterval(function(){
+        window.setInterval(function() {
             window.location.reload();
-        }, 10000)
+        }, 30000)
     </script>
     <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -21,7 +21,7 @@
         {% for row in data %}
             <tr class="table__row">
                 {% for cell in row %}
-                    {% if cell[2] == 0 %} <!-- SE NON C'E' IL JOLLY-->
+                    {% if cell[2] == 0 %}
                         {% if cell[1] == -1 %}
                             <td class="table__cell casellina-1">{{ cell[0] }}</td>
                         {% endif %}
@@ -31,7 +31,7 @@
                         {% if cell[1] == 1 %}
                             <td class="table__cell casellina1">{{ cell[0] }}</td>
                         {% endif %}
-                    {% else %} <!-- SE C'E' IL JOLLY-->
+                    {% else %}
                         {% if cell[1] == -1 %}
                         <td class="table__cell casellina-1 jolly">{{ cell[0] }}</td>
                         {% endif %}

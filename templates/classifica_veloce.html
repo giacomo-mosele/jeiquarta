@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>J^4 | Classifica Finale</title>
-    <link rel="stylesheet" href="/static/style.css" />
+    <title>J^4 | Classifica</title>
+    <script>
+        window.setInterval(function() {
+            window.location.reload();
+        }, 8000)
+    </script>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    {% if squadre_nascoste > 0 %}
-        <button id="aggiungi_squadra">Mostra la posizione numero {{ squadre_nascoste }}</button>
-    {% endif %}
     <table>
         <tr class="table__header">
             {% for header in headings %}
@@ -45,15 +47,7 @@
         {% endfor %}
     </table>
     <div class="container">
-        <h1 class="tempo">Gara terminata</h1>
+        <h1 class="tempo">{{ tempo }}</h1>
     </div>
-    
-    <script>
-        document.getElementById("aggiungi_squadra").onclick = function() {
-            fetch(window.location.href, {method: "POST"})
-
-            window.location.reload();
-        }
-    </script>
 </body>
 </html>

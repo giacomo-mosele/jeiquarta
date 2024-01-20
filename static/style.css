@@ -15,14 +15,27 @@
 .table__cell {
     padding: 12px;
     text-align: center;
-    width: 350pt;
+    width: 200pt;
     border-radius: 4px;
+    white-space: nowrap;
+}
+
+.casellina-1 {
+    background-color: lightcoral;
+}
+
+.casellina1 {
+    background-color: lightgreen;
+}
+
+.jolly {
+    box-shadow: 0px 0px 0px 3px yellow inset;
 }
 
 .container {
     position: absolute;
     width: 100vw;
-    bottom: -50px;
+    bottom: -20px;
     display: flex;
     position: fixed;
     justify-content: center;
@@ -36,17 +49,5 @@
     border-style: solid;
     border-width: 4px;
     border-color: black;
-    font-size: 600%;
-}
-
-.casellina-1 {
-    background-color: lightcoral;
-}
-
-.casellina1 {
-    background-color: lightgreen;
-}
-
-.jolly {
-    box-shadow: 0px 0px 0px 3px yellow inset;
+    font-size: 400%;
 }
