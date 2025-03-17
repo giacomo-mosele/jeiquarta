@@ -1,0 +1,135 @@
+2025-01-17 13:38:34 - Questo e' un allenamento. Sono disattivati il sorting e i punteggi
+
+2025-01-17 13:42:10 - Il capitano "FeiXiang Li (01)" ha impostato il jolly della squadra sul problema 23
+
+2025-01-17 13:47:02 - La squadra "Delia Zinna (06)" ha consegnato 5814 sul problema 1. Questo risultato e' sbagliato.
+
+2025-01-17 13:47:22 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 5814 sul problema 1. Questo risultato e' sbagliato.
+
+2025-01-17 13:48:03 - La squadra "Raquel Caserza (04)" ha consegnato 99 sul problema 5. Questo risultato e' giusto.
+
+2025-01-17 13:48:18 - La squadra "Aurora Gobbi (05)" ha consegnato 99 sul problema 5. Questo risultato e' giusto.
+
+2025-01-17 13:48:32 - La squadra "Letizia Solari (03)" ha consegnato 12 sul problema 2. Questo risultato e' sbagliato.
+
+2025-01-17 13:49:14 - La squadra "Raquel Caserza (04)" ha consegnato 505 sul problema 4. Questo risultato e' sbagliato.
+
+2025-01-17 13:49:27 - La squadra "Aurora Gobbi (05)" ha consegnato 505 sul problema 4. Questo risultato e' sbagliato.
+
+2025-01-17 13:51:47 - La squadra "Delia Zinna (06)" ha consegnato 969 sul problema 1. Questo risultato e' sbagliato.
+
+2025-01-17 13:51:57 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 969 sul problema 1. Questo risultato e' sbagliato.
+
+2025-01-17 13:55:37 - La squadra "Letizia Solari (03)" ha consegnato 88 sul problema 2. Questo risultato e' giusto.
+
+2025-01-17 13:55:49 - La squadra "Ginevra Tamborra (02)" ha consegnato 88 sul problema 2. Questo risultato e' giusto.
+
+2025-01-17 13:56:58 - La squadra "FeiXiang Li (01)" ha consegnato 294 sul problema 15. Questo risultato e' sbagliato.
+
+2025-01-17 13:57:40 - La squadra "FeiXiang Li (01)" ha consegnato 295 sul problema 15. Questo risultato e' giusto.
+
+2025-01-17 14:01:21 - La squadra "Ginevra Tamborra (02)" ha consegnato 1015 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:01:53 - La squadra "Letizia Solari (03)" ha consegnato 1015 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:03:48 - La squadra "Letizia Solari (03)" ha consegnato 2019 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:03:55 - La squadra "Ginevra Tamborra (02)" ha consegnato 2019 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:06:47 - La squadra "Ginevra Tamborra (02)" ha consegnato 2018 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:07:02 - La squadra "Letizia Solari (03)" ha consegnato 2018 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:12:54 - La squadra "FeiXiang Li (01)" ha consegnato 5 sul problema 4. Questo risultato e' giusto.
+
+2025-01-17 14:13:19 - La squadra "Delia Zinna (06)" ha consegnato 5 sul problema 4. Questo risultato e' giusto.
+
+2025-01-17 14:13:31 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 5 sul problema 4. Questo risultato e' giusto.
+
+2025-01-17 14:17:44 - La squadra "Letizia Solari (03)" ha consegnato 1014 sul problema 3. Questo risultato e' sbagliato.
+
+2025-01-17 14:18:35 - La squadra "FeiXiang Li (01)" ha consegnato 100 sul problema 17. Questo risultato e' giusto.
+
+2025-01-17 14:21:38 - La squadra "Delia Zinna (06)" ha consegnato 4 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:21:48 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 4 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:22:05 - La squadra "Delia Zinna (06)" ha consegnato 7 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:22:17 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 7 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:23:27 - La squadra "FeiXiang Li (01)" ha consegnato 111 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:23:39 - La squadra "Delia Zinna (06)" ha consegnato 111 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:23:49 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 111 sul problema 6. Questo risultato e' sbagliato.
+
+2025-01-17 14:25:10 - La squadra "Delia Zinna (06)" ha consegnato 113 sul problema 6. Questo risultato e' giusto.
+
+2025-01-17 14:25:22 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 113 sul problema 6. Questo risultato e' giusto.
+
+2025-01-17 14:28:17 - La squadra "Letizia Solari (03)" ha consegnato 11 sul problema 8. Questo risultato e' giusto.
+
+2025-01-17 14:37:55 - La squadra "Letizia Solari (03)" ha consegnato 4 sul problema 10. Questo risultato e' giusto.
+
+2025-01-17 14:38:05 - La squadra "FeiXiang Li (01)" ha consegnato 4 sul problema 10. Questo risultato e' giusto.
+
+2025-01-17 14:38:29 - La squadra "Ginevra Tamborra (02)" ha consegnato 271 sul problema 14. Questo risultato e' giusto.
+
+2025-01-17 14:38:39 - La squadra "FeiXiang Li (01)" ha consegnato 271 sul problema 14. Questo risultato e' giusto.
+
+2025-01-17 14:41:12 - La squadra "Ginevra Tamborra (02)" ha consegnato 1010 sul problema 3. Questo risultato e' giusto.
+
+2025-01-17 14:41:26 - La squadra "FeiXiang Li (01)" ha consegnato 51 sul problema 23. Questo risultato e' sbagliato.
+
+2025-01-17 14:41:56 - La squadra "Letizia Solari (03)" ha consegnato 1010 sul problema 3. Questo risultato e' giusto.
+
+2025-01-17 14:48:02 - La squadra "Ginevra Tamborra (02)" ha consegnato 816 sul problema 1. Questo risultato e' sbagliato.
+
+2025-01-17 14:48:35 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 3060 sul problema 9. Questo risultato e' sbagliato.
+
+2025-01-17 14:48:47 - La squadra "Letizia Solari (03)" ha consegnato 3060 sul problema 9. Questo risultato e' sbagliato.
+
+2025-01-17 14:49:03 - La squadra "FeiXiang Li (01)" ha consegnato 4896 sul problema 1. Questo risultato e' giusto.
+
+2025-01-17 14:49:40 - La squadra "Ginevra Tamborra (02)" ha consegnato 4896 sul problema 1. Questo risultato e' giusto.
+
+2025-01-17 14:57:59 - La squadra "FeiXiang Li (01)" ha consegnato 95 sul problema 23. Questo risultato e' sbagliato.
+
+2025-01-17 14:58:13 - La squadra "Raquel Caserza (04)" ha consegnato 95 sul problema 23. Questo risultato e' sbagliato.
+
+2025-01-17 15:00:10 - La squadra "FeiXiang Li (01)" ha consegnato 96 sul problema 23. Questo risultato e' giusto.
+
+2025-01-17 15:00:25 - La squadra "Raquel Caserza (04)" ha consegnato 96 sul problema 23. Questo risultato e' giusto.
+
+2025-01-17 15:03:30 - La squadra "FeiXiang Li (01)" ha consegnato 11 sul problema 7. Questo risultato e' giusto.
+
+2025-01-17 15:09:43 - La squadra "Ginevra Tamborra (02)" ha consegnato 394 sul problema 11. Questo risultato e' giusto.
+
+2025-01-17 15:09:54 - La squadra "Letizia Solari (03)" ha consegnato 394 sul problema 11. Questo risultato e' giusto.
+
+2025-01-17 15:10:39 - La squadra "FeiXiang Li (01)" ha consegnato 2070 sul problema 9. Questo risultato e' sbagliato.
+
+2025-01-17 15:10:52 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 2070 sul problema 11. Questo risultato e' sbagliato.
+
+2025-01-17 15:15:00 - La squadra "FeiXiang Li (01)" ha consegnato 3042 sul problema 9. Questo risultato e' sbagliato.
+
+2025-01-17 15:15:11 - La squadra "Mariafrancesca Dieta (07)" ha consegnato 3042 sul problema 9. Questo risultato e' sbagliato.
+
+2025-01-17 15:15:42 - La squadra "Aurora Gobbi (05)" ha consegnato 5 sul problema 12. Questo risultato e' giusto.
+
+2025-01-17 15:15:50 - La squadra "Raquel Caserza (04)" ha consegnato 5 sul problema 12. Questo risultato e' giusto.
+
+2025-01-17 15:30:23 - La squadra "Ginevra Tamborra (02)" ha consegnato 1225 sul problema 13. Questo risultato e' giusto.
+
+2025-01-17 15:30:34 - La squadra "Letizia Solari (03)" ha consegnato 1225 sul problema 13. Questo risultato e' giusto.
+
+2025-01-17 15:33:36 - Classifica oscurata
+
+2025-01-17 15:35:43 - La squadra "FeiXiang Li (01)" ha consegnato 69 sul problema 20. Questo risultato e' sbagliato.
+
+2025-01-17 15:37:51 - La squadra "FeiXiang Li (01)" ha consegnato 70 sul problema 20. Questo risultato e' sbagliato.
+
+2025-01-17 15:38:01 - La squadra "Raquel Caserza (04)" ha consegnato 70 sul problema 20. Questo risultato e' sbagliato.
+
+2025-01-17 15:38:35 - Allenamento terminato

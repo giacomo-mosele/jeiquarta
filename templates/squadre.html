@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J^4 | Squadre</title>
+</head>
+<body>
+    <h1>Squadre partecipanti:</h1>
+    {% for squadra in partecipanti %}
+        <br>
+        <h2>{{ squadra[0] }}</h2>
+        {% for persona in squadra[1:] %}
+            <p>{{ persona }}</p>
+        {% endfor %}
+    {% endfor %}
+</body>
+</html>

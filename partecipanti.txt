@@ -1,0 +1,9 @@
+squadra 1
+tizio
+caio
+sempronio
+
+squadra 2
+tiziooo
+caiooo
+semproniooo

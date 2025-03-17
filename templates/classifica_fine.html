@@ -50,9 +50,21 @@
     
     <script>
         document.getElementById("aggiungi_squadra").onclick = function() {
-            fetch(window.location.href, {method: "POST"})
+            //params = new URLSearchParams(window.location.search)
+            //nasc = params.get("nascoste")
+            //nascoste = 0
+            //if (nasc == null || nasc == NaN) {
+            //    nascoste = 0
+            //}
+            //else {
+            //    nascoste = parseInt(nasc)
+            //}
 
-            window.location.reload();
+            var squadre_nascoste = '{{ squadre_nascoste }}';
+
+            var goto = window.location.href.split('?')[0] + "?nascoste=" + (squadre_nascoste-1);
+            
+            window.location.replace(goto)
         }
     </script>
 </body>

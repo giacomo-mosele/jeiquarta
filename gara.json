@@ -1,1 +1,19 @@
-{"n":2,"fine_incremento":100,"incremento_errore":2,"bonus_risposte":[30, 20, 10],"bonus_fullato":[100, 60, 40],"risultati":[27, 7176, 1012, 276, 4242, 183, 63, 24, 205, 144],"squadre":["Ginevra Tamborra", "Andrès Sivero", "Lorenzo Caprile", "Tommaso Caprile", "Emanuele Todaro", "Giacomo Delpiano"],"durata":120,"tempo_jolly":20}
+{
+    "n":2,
+    "fine_incremento":90,
+    "incremento_errore":2,
+    "bonus_risposte":[20, 10, 5],
+    "bonus_fullato":[50, 40, 30, 20, 10],
+    "risultati":[2025, 240, 3917, 96, 514, 66, 5, 111, 394, 2600, 4350, 12, 45, 700, 81, 40, 195, 1426, 8896, 8480, 6223],
+    "squadre":[
+        "Gli elfi",
+        "Le renne",
+        "I pupazzi di neve",
+        "I pan di zenzero",
+        "I pini di Natale",
+        "I fiocchi di neve",
+        "I Babbi Natali 1 (ospite)",
+        "I Babbi Natali 2 (ospite)"],
+    "durata":120,
+    "tempo_jolly":17
+}
