@@ -11,6 +11,7 @@ Aprire SetupGareMate.exe e inserire tutte le informazioni. Verrà creato un file
 E' possibile avere delle squadre ospite aggiungendo la stringa "(ospite)" senza virgolette al nome della squadra nel momento del setup. Le squadre ospite DEVONO essere le ultime ad essere inserite nel setup, e compariranno dietro all'ultima squadra non ospite.
 Attenzione: il programma python da per scontato che il file si chiami gara.json (almeno che non si tratti di un allenamento, vedi sotto), ma volendo si può modificare
 Per runnare bisogna, al momento di inizio gara, eseguire sul terminale il comando "python -m flask run" (dalla stessa directory di app.py). Prima di farlo, però, bisogna avere installato python, avere installato flask ("pip install flask") e aver eseguito (nella stessa directory di app.py) i comandi "set FLASK_APP=app" e "set FLASK_ENV=development". Su quest'ultimo non sono sicurissimo che sia la cosa migliore, ma sono sicuro che funziona quindi ve lo fate andare bene :)
+La classifica apparirà su localhost:5000, mentre l'inserimento sarà su localhost:5000/inserimento.
 
 Se volete mostrare più squadre o problemi, potete manipolare rispettivamente "padding" e "width" di table__cell dentro style.css
 
@@ -20,3 +21,4 @@ Inoltre, a fine gara viene salvata nella cartella archivio_gare la classifica fi
 Se si sta facendo un allenamento a squadre si può cambiare a True il valore del bool MODALITA_ALLENAMENTO (in cima allo script) per disattivare il sorting e i punteggi. Per far funzionare correttamente questa modalità consiglio di settare n=0, fine_incremento=0, incremento_errore=0, bonus_risposte=[0], bonus_full=[0], tempo_jolly=0. I nomi delle squadre sono i nomi dei membri della squadra che si sta allenando.
 In modalità allenamento, il capitano (che deve avere il codice 01) può impostare il jolly normalmente dalla pagina di inserimento e il jolly verrà impostato a tutti i membri della squadra. Per impostare il jolly non ci sono limiti di tempo (troppi sbatti da implementare)
 Se si è in modalità allenamento, il file json che verrà cercato non sarà gara.json, bensì un file il cui nome è la variabile nome_allenamento (che non contiene l'estensione .json) di app.py
+
