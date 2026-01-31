@@ -19,9 +19,4 @@ Inoltre, a fine gara viene salvata nella cartella archivio_gare la classifica fi
 
 Se si sta facendo un allenamento a squadre si può cambiare a True il valore del bool MODALITA_ALLENAMENTO (in cima allo script) per disattivare il sorting e i punteggi. Per far funzionare correttamente questa modalità consiglio di settare n=0, fine_incremento=0, incremento_errore=0, bonus_risposte=[0], bonus_full=[0], tempo_jolly=0. I nomi delle squadre sono i nomi dei membri della squadra che si sta allenando.
 In modalità allenamento, il capitano (che deve avere il codice 01) può impostare il jolly normalmente dalla pagina di inserimento e il jolly verrà impostato a tutti i membri della squadra. Per impostare il jolly non ci sono limiti di tempo (troppi sbatti da implementare)
-Se si è in modalità allenamento, il file json che verrà cercato sarà allenamento.json anziché gara.json
-
-Se si sta hostando una gara 100 problems (sono fortissimo e ho previsto anche questo) bisogna cambiare a True il valore del bool MODALITA_100_PROBLEMS (in cima allo script) e i problemi verranno mostrati a blocchi di 25 ciclando periodicamente.
-In questa modalità il moltiplicatore applicato al problema jolly è 5, anziché il solito 2 (giusto per rendere il tutto un po' più spicy)
-Se si è in modalità 100 problems, il file json che verrà cercato sarà gara_100.json anziché gara.json
-Attenzione: questa modalità funziona solo se hostata in locale e con una sola classifica aperta, altrimenti il sistema (implementato in maniera pessima) va a farsi benedire. Poi forse un giorno lo cambio se ne ho voglia
+Se si è in modalità allenamento, il file json che verrà cercato non sarà gara.json, bensì un file il cui nome è la variabile nome_allenamento (che non contiene l'estensione .json) di app.py
