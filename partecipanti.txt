@@ -1,9 +1,9 @@
-squadra 1
-tizio
-caio
-sempronio
+Squadra 1
+Membro 1
+Membro 2
+Membro 3
 
-squadra 2
-tiziooo
-caiooo
-semproniooo
+Squadra 2
+Membro 4
+Membro 5
+Membro 6
