@@ -8,6 +8,7 @@ url = "https://jeiquarta.pythonanywhere.com/inserimento" if online else "http://
 
 jollato = [False for _ in range(20)]
 
+
 def send(id):
     cs = random.randint(1, 20)
     np = random.randint(1, 15)
