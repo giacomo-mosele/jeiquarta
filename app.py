@@ -10,17 +10,17 @@ app = Flask(__name__)
 
 print_warning = False
 
-MODALITA_ALLENAMENTO = True # se si sta facendo un allenamento a squadre, mettere True per disattivare il sorting e i punteggi
+MODALITA_ALLENAMENTO = False # se si sta facendo un allenamento a squadre, mettere True per disattivare il sorting e i punteggi
 nome_allenamento = "allenamento_prima"
 
-MODALITA_100_PROBLEMS = False # deprecated, probabilmente non funziona
+MODALITA_100_PROBLEMS = False # deprecated
 parziale_classifica = 0 # cicla tra 0 e 3
 
-minuti_oscuri = 5
+minuti_oscuri = 3
 
-numero_massimo_di_squadre_da_nascondere_a_fine_gara = 999 # sì, il nome della variabile DEVE essere così lungo :)
+numero_massimo_di_squadre_da_nascondere_a_fine_gara = 999
 
-password_inserimento_terminale = "dsa321"
+password_inserimento_terminale = ""
 
 # APERTURA E LETTURA DEL FILE JSON, CON ASSEGNAZIONE DELLE VARIABILI
 file_json = open(f"{nome_allenamento}.json" if MODALITA_ALLENAMENTO else "gara_100.json" if MODALITA_100_PROBLEMS else "gara.json", "r", encoding="utf-8")
@@ -28,10 +28,10 @@ json_data = json.load(file_json)
 n = json_data["n"]
 fine_incremento = json_data["fine_incremento"]
 incremento_errore = json_data["incremento_errore"]
-bonus_risposte = json_data["bonus_risposte"] # esce come list
-bonus_fullato = json_data["bonus_fullato"] # esce come list
-risultati = json_data["risultati"] #esce come list
-squadre = json_data["squadre"] # esce come list
+bonus_risposte = json_data["bonus_risposte"]
+bonus_fullato = json_data["bonus_fullato"]
+risultati = json_data["risultati"]
+squadre = json_data["squadre"]
 durata_in_minuti = json_data["durata"]
 tempo_jolly = json_data["tempo_jolly"]
 file_json.close()
@@ -55,7 +55,7 @@ unix_improprio_fine = unix_improprio_inizio + durata_in_minuti * 60
 # SETUP LOGGER
 data_log = f"{datetime_inizio.year}.{datetime_inizio.month:02}.{datetime_inizio.day:02}_{datetime_inizio.hour:02}.{datetime_inizio.minute:02}.{datetime_inizio.second:02}"
 logger = logging.getLogger("werkzeug")
-logging.basicConfig(level=logging.WARNING, filename=f"logs/log_{'allenamento' if MODALITA_ALLENAMENTO else 'gara'}_{data_log}.log", filemode="w", format="%(asctime)s - %(levelname)s - %(message)s") # i "veri" log saranno dei warning, tutta la roba delle richieste GET e POST sarà info
+logging.basicConfig(level=logging.WARNING, filename=f"logs/log_{'allenamento' if MODALITA_ALLENAMENTO else 'gara'}_{data_log}.log", filemode="w", format="%(asctime)s - %(levelname)s - %(message)s") # i "veri" log saranno dei warning, tutto ciò che riguarda le richieste GET e POST sarà info
 
 if MODALITA_ALLENAMENTO:
     logging.warning("Questo e' un allenamento. Sono disattivati il sorting e i punteggi")
@@ -113,9 +113,6 @@ def headings():
     
     return ["Pos.", "Squadra", "Punteggio"] + [f"{i + 1}" for i in problemi_mostrati]
 
-easter_egg = False
-onorificienze = ["il boss", "il dev", "il migliore", "il supremo", "l'ineguagliabile", "l'insuperabile", "il modesto", "il magnifico", "il non TDNaro", "il geometra", "Mosele"]
-
 # SETUP DEL RESTO DELLA TABELLA
 def RIGA(i):
     problemi_mostrati = range(numero_problemi)
@@ -128,13 +125,9 @@ def RIGA(i):
     
     nome = squadre[i - 1]
 
-    if easter_egg:
-        if ("mosele" in nome.lower() or "mosy" in nome.lower()) and random.randint(1, 10) == 1:
-            nome = nome[:-4] + random.choice(onorificienze) + " " + nome[-4:]
-
     cella_pos = (i, 0, 0)
     cella_nome = (nome, 0, 0)
-    cella_punteggio = ("chupa" if MODALITA_ALLENAMENTO else numero_problemi * 10 + sum(db_celle[i - 1][index].PUNTEGGIO for index in range(numero_problemi + 2)), 0, 0)
+    cella_punteggio = ("N.A." if MODALITA_ALLENAMENTO else numero_problemi * 10 + sum(db_celle[i - 1][index].PUNTEGGIO for index in range(numero_problemi + 2)), 0, 0)
 
     return [cella_pos, cella_nome, cella_punteggio] + [(db_celle[i - 1][k].PUNTEGGIO, db_celle[i - 1][k].STATO, db_celle[i - 1][k].JOLLY) for k in problemi_mostrati]
 
@@ -157,7 +150,7 @@ def sorta_squadre():
 
 durata_gara = durata_in_minuti * 60
 secondi = durata_gara % 60
-minuti = int((durata_gara // 60) % 60) # sì, lo so che non ha senso definire i minuti in questo modo ma lascia stare così
+minuti = int((durata_gara // 60) % 60)
 ore = int(durata_gara // 3600)
 tempo_rimanente = durata_gara
 
@@ -170,7 +163,7 @@ gia_gestito_jolly = False
 
 squadre_da_nascondere = min(numero_squadre - ospiti, numero_massimo_di_squadre_da_nascondere_a_fine_gara)
 
-def sveglia(): # nome un po' creativo, è la funzione che gestisce il tempo qui su python
+def sveglia():
     global suffisso_classifica
 
     global gia_oscurata
@@ -195,7 +188,7 @@ def sveglia(): # nome un po' creativo, è la funzione che gestisce il tempo qui 
         if print_warning:
             print("Allenamento terminato" if MODALITA_ALLENAMENTO else "Gara terminata")
         suffisso_classifica = "_fine"
-        puo_ancora_incrementare = False # per evitare casini
+        puo_ancora_incrementare = False
         
         try:
             file_html = open(f"{os.getcwd()}/archivio_gare/{'tabellone_finale_allenamento' if MODALITA_ALLENAMENTO else 'classifica_finale'}_{data_log}.html", "w", encoding="utf-8")
@@ -212,7 +205,7 @@ def sveglia(): # nome un po' creativo, è la funzione che gestisce il tempo qui 
             if db_problemi[id_problema].NUMERO_SOLUZIONI >= n:
                 continue
 
-            db_problemi[id_problema].VALORE += int(differenza) # no, non si rischia che nel frattempo qualcuno abbia cappato un problema perché check_risultato() per prima cosa chiama sveglia()
+            db_problemi[id_problema].VALORE += int(differenza)
             problemi_incrementati.append(id_problema + 1)
             for id_squadra in range(numero_squadre):
                 if db_celle[id_squadra][id_problema].STATO == 1:
@@ -262,7 +255,7 @@ numero_problema = 0
 risultato = 0
 
 def check_risultato():
-    sveglia() # sveglia() va chiamata spesso, quindi chiamiamola anche qua dentro
+    sveglia()
 
     local_cs = codice_squadra # ottimizzazione
     local_np = numero_problema # ottimizzazione
@@ -354,7 +347,7 @@ def classifica():
     if squadre_nascoste > numero_squadre - ospiti:
         squadre_nascoste = squadre_da_nascondere
 
-    if suffisso_classifica != "_fine": #funziona ma la logica potrebbe essere scritta molto meglio. tuttavia, non ho voglia
+    if suffisso_classifica != "_fine":
         squadre_nascoste = 0
 
     classifica_html = render_template(f"classifica{suffisso_classifica}.html", headings=headings(), data= [data[0]] + [[("?", 0, 0), ("?????", 0, 0), ("???", 0, 0)] + [("?", 0, 0)] * numero_problemi] * squadre_nascoste + data[squadre_nascoste + 1:], tempo=f"{f'{ore}:' if ore > 0 else ''}{minuti:02}:{secondi:02}", squadre_nascoste=squadre_nascoste)
@@ -362,7 +355,7 @@ def classifica():
     if suffisso_classifica == "_fine":
         classifica_html = render_template(f"classifica_fine.html", headings=headings(), data= [data[0]] + [[("?", 0, 0), ("?????", 0, 0), ("???", 0, 0)] + [("?", 0, 0)] * numero_problemi] * squadre_nascoste + data[squadre_nascoste + 1:], tempo=f"{f'{ore}:' if ore > 0 else ''}{minuti:02}:{secondi:02}", squadre_nascoste=squadre_nascoste)
         
-        if squadre_nascoste == 0: # sì, la classifica viene salvata due volte. questo perché potrebbero essere stati inseriti degli ultimi risultati dopo il termine della gara, ma voglio comunque assicurarmi il salvataggio a fine gara
+        if squadre_nascoste == 0: # la classifica viene salvata due volte, perché potrebbero essere stati inseriti degli ultimi risultati dopo il termine della gara, ma voglio comunque assicurarmi il salvataggio a fine gara
             try:
                 file_html = open(f"{os.getcwd()}/archivio_gare/{'tabellone_finale_allenamento' if MODALITA_ALLENAMENTO else 'classifica_finale'}_{data_log}.html", "w", encoding="utf-8")
                 file_html.write(classifica_html.replace("/static/", ""))
@@ -506,6 +499,6 @@ def esegui_comando(comando):
         sorta_squadre()
 
 
-if __name__ == "__main__": # bo, non viene chiamato. strano lol (comunque funziona)
+if __name__ == "__main__":
     print("app.py sta runnando come processo main")
-    app.run(debug = False)
+    app.run(port = 5001, host="0.0.0.0", debug = False)
