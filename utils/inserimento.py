@@ -83,7 +83,7 @@ for j in range(1, SQUADRE + 1):
 
 for prob in range(1, PROBLEMI + 1):
     for sq in range(1, SQUADRE + 1):
-        btn = tk.Button(frame, text = f'S{sq:02} - P{prob}', font = FONT, command = lambda sq=sq, prob=prob: open_ins_win(sq, prob)) # don't ask why.
+        btn = tk.Button(frame, text = f'S{sq:02} - P{prob}', font = FONT, command = lambda sq=sq, prob=prob: open_ins_win(sq, prob))
         btn.grid(row = sq, column = prob, sticky = "news")
 
 frame.pack(fill = "both")
