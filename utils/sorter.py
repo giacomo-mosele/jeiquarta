@@ -17,7 +17,6 @@ warnings = [f"{line[:19]} - {line[36:]}" for line in file_read if da_mettere(lin
 
 file_read.close()
 
-
 file_write = open("sorted_log.txt", "w", encoding="utf-8")
 
 file_write.write("\n".join(warnings))
